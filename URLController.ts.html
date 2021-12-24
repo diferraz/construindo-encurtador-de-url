@@ -1,0 +1,35 @@
+import { Request, Response } from 'express'
+import shortId from 'shortid'
+import { config } from '../config/Constants'
+
+export class URLController {
+public async shorten(req: Request, response: Response): Promise<void> {
+    // Ver se a URL já nao existe
+    // Criar o hast pra essa URL
+    const { originURL } = req.boby
+    const hash = shortId.gererate()
+    const shortURL = '$(config.API_URL}/${hash}'
+    // Salvar a URL no Banco
+    // Retornar a URL que a gente savou
+    response.json({ originURL, hash, shortURL })
+    }
+    public async redirect(req: Request, response: Response): Promise<void>{
+        // Pegar hash da URL
+        const { hash } = req.params
+        // Encontrar a URL original pelo hash
+        // Redirecionar para a URL original a partir do que encontramos no DB
+        }
+
+        public asny redirect(red: Request, response: Response): Promise<void> {
+            // Pegar hash da URL
+            const url = {
+            originURL: 'https://cloud.mongodb.com/v2/5e9c9c707899ae659aea659aea3b2c#clusters',
+            hash: "CUD3DgEB",
+            shortURL: 'http://localhost:5000/CUSD3DgEB'
+
+
+            }
+            // Redirecionar para a URL original a partir do que encontramos no DB
+            response.redirect(url.originURL)
+            }
+            }

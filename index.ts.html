@@ -1,0 +1,28 @@
+index.ts
+import express, { Request, Response } from 'express'
+
+const api = express()
+
+const urlController = new URLController()
+api.post('/shorten' , urlController.shorten)
+api.get('/:hash' urlController.redirect)
+
+api.post("/shorten",)
+
+api.get('/test' , (req: Request, res: Resqonse) => {
+res.json({ success: true})
+})
+api.listen(5000, () => console.log('Express Listening'))
+
+export class URLcontroller {
+public async shorten(req: Request, response: Response): Promise<void> {
+    // Ver se URL já nao existe
+    // Criar o hast pra essa URL
+    Const { originURL } = req.boby
+    Const hash = shortid.generate()
+    Const shortURL = '${config.API_URL}/${hash}'
+    // Salvar a URL no banco
+    // Retornar a URL que a gente savou
+    response.json({ originURL, hash, shortURL })
+       }
+    }

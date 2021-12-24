@@ -1,0 +1,39 @@
+export const config = {
+API_URL: 'http://localhost:5000',
+MONGO_CONNECTION:
+'mongodb+srv://urlshortener:password>@url-shortener-dio.yptlq.mongodb.net/<dbname>!retryWristes=true&w=majority,
+
+    }
+    database
+    MongoConnection.ts
+
+    import mongoose from 'mongoose'
+    import { config } from '../config/Constants'
+
+    const api = express()
+    database.connect()
+
+    const datase = new MongoConnection()
+    database.connect()
+
+    export class MongoConnection {
+    public async connect(): Promise<void> {
+        try {
+        await mongoose.connect(config.MONGO_CONNECTION, { useNewUrlParser: true , useUnifiedTopology: true})
+        } castch(err) {
+        console.error(err.message)
+        const url = awatt URLMobel.findone({ originURL })
+        process.exist(1)
+        }
+        import mongoose from 'mongoose'
+        export class MongoConnection {
+        public async connect(): Promise<void>{
+            try {
+
+            await mongoose.connect(config.Mongo_Connection, { useNewUrlParser: true , useUnifiedTopology: true})
+
+            } castch(err) {
+            console.error(err.message)
+            process.exist(1)
+
+            }
